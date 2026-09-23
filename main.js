@@ -24,3 +24,27 @@ window.addEventListener('scroll', () => {
         heroImg.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
     }
 });
+
+// Mobile Menu Logic
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+if (mobileMenuBtn && mobileMenu && menuIcon) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-x-full');
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            menuIcon.textContent = 'menu';
+        } else {
+            menuIcon.textContent = 'close';
+        }
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            menuIcon.textContent = 'menu';
+        });
+    });
+}

@@ -6,219 +6,259 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>M.Sc. (Agriculture) in Agronomy | Amrita Agriculture</title>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-
-
 </head>
 
 <body
     class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
     <!-- TopNavBar -->
     <nav
-        class="w-full top-0 sticky z-50 bg-[#fbfaee]/90 backdrop-blur-md dark:bg-stone-950 flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div class="text-2xl font-bold text-[#173418] dark:text-[#f5f4e8] font-['Manrope'] tracking-tight">Amrita
-            Agriculture</div>
+        class="w-full top-0 sticky z-50 bg-[#fbfaee]/90 backdrop-blur-md dark:bg-stone-950 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 max-w-7xl mx-auto">
+        <img src="/src/assets/amrita-red-logo.svg" alt="Amrita Agriculture Logo" class="h-8 md:h-12 object-contain" />
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn"
+            class="md:hidden flex items-center justify-center p-2 text-stone-800 dark:text-stone-200">
+            <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+        </button>
+
         <div class="hidden md:flex gap-8 items-center">
             <a class="font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors duration-300"
-                href="#">Programs</a>
+                href="#programs">Programs</a>
             <a class="font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors duration-300"
-                href="#">About</a>
+                href="#about">About</a>
             <a class="font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors duration-300"
-                href="#">Scholarships</a>
+                href="#scholarships">Scholarships</a>
             <a class="font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors duration-300"
-                href="#">Careers</a>
+                href="#careers">Careers</a>
             <button
                 class="bg-primary text-on-primary px-6 py-2 rounded-full font-headline font-bold scale-95 active:opacity-80 transition-all hover:shadow-lg">Apply
                 Now</button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#fbfaee] dark:bg-stone-950 z-40 transform translate-x-full transition-transform duration-300 flex flex-col pt-24 px-8 gap-6 md:hidden">
+        <a class="mobile-link text-2xl font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors"
+            href="#programs">Programs</a>
+        <a class="mobile-link text-2xl font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors"
+            href="#about">About</a>
+        <a class="mobile-link text-2xl font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors"
+            href="#scholarships">Scholarships</a>
+        <a class="mobile-link text-2xl font-['Manrope'] font-semibold tracking-tight text-stone-600 dark:text-stone-400 hover:text-[#79573f] transition-colors"
+            href="#careers">Careers</a>
+        <button
+            class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold text-lg mt-4 w-max">Apply
+            Now</button>
+    </div>
     <main>
         <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover parallax-bg scale-110"
+                <img class="w-full h-full object-cover scale-110"
                     data-alt="wide cinematic shot of lush green agricultural fields stretching towards the Western Ghats mountains under a clear bright morning sky"
-                    id="hero-img"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7aX_FarD3jEDSDoUrOVZUvGXC7exB5-_Wq0HRai5Ws_zSmmAXWWy_dqVqS5RGu467rjXQmgEMYxMIs_-ZmodYPY-1-uIK9Zt4Q40RsB-8JmpHpzveGRLAulo3IQ_NJWNMuKbFKta1Z-sluNJBzxNo9EYcWceEj037SRHG0MdM4njZDoqNrlwJLYOxfzueNrX2JYIRdwg_OSrF-Y0C76kP1NHj3R5c-4oa3EgCQcxeh5-EJsxVsfPM51nxqMvjdBACcWwPhPY27js" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent"></div>
+                    id="hero-img" src="/src/assets/hero-section.webp" />
+                <div class="absolute inset-0 bg-primary/40 md:bg-transparent"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-primary/90 via-primary/60 md:via-primary/40 to-transparent">
+                </div>
             </div>
-            <div class="container mx-auto px-8 relative z-10">
+            <div class="container mx-auto px-6 md:px-8 relative z-10 pt-16 pb-12 md:py-0 mt-8 md:mt-0">
                 <div class="max-w-3xl animate-fade-up">
-                    <span
-                        class="inline-block px-4 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-sm font-label font-semibold mb-6">Amrita
-                        School of Agricultural Sciences</span>
-                    <h1 class="text-white font-headline font-extrabold text-5xl md:text-7xl leading-tight mb-6">
-                        Cultivating Knowledge.<br />
-                        <span class="text-primary-fixed">Sustaining the Future.</span>
+                    <h1
+                        class="text-white font-headline font-extrabold text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-tight mb-4 md:mb-6">
+                        <span class="block md:inline md:whitespace-nowrap">Cultivating Knowledge.</span><br
+                            class="hidden md:block" />
+                        <span class="text-primary-fixed block mt-1 md:mt-0">Sustaining the Future.</span>
                     </h1>
-                    <p class="text-white/90 text-xl md:text-2xl font-body font-light mb-8 max-w-2xl">
+                    <p
+                        class="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-body font-light mb-8 max-w-2xl leading-relaxed md:leading-normal">
                         M.Sc. (Agriculture) in Agronomy | Amrita Vishwa Vidyapeetham, Coimbatore
                     </p>
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 w-full sm:w-auto">
                         <button
-                            class="bg-primary-container text-white px-8 py-4 rounded-full font-headline font-bold text-lg hover:shadow-xl transition-all hover:-translate-y-1 active:opacity-90">Apply
+                            class="bg-primary-fixed text-on-primary-fixed px-6 md:px-8 py-3.5 md:py-4 rounded-full font-headline font-bold text-base md:text-lg border border-white/20 hover:bg-white/10 transition-all hover:-translate-y-1 active:opacity-90 w-full sm:w-auto text-center">Apply
                             Now</button>
                         <button
-                            class="glass-card text-white px-8 py-4 rounded-full font-headline font-bold text-lg border border-white/20 hover:bg-white/10 transition-all hover:-translate-y-1">Download
+                            class="bg-white text-black px-6 md:px-8 py-3.5 md:py-4 rounded-full font-headline font-bold text-base md:text-lg border border-white/20 hover:bg-white/10 transition-all hover:-translate-y-1 w-full sm:w-auto text-center">Download
                             Brochure</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Stats Ticker -->
-        <section class="reveal bg-surface-container-low py-12 relative -mt-10 mx-8 rounded-xl z-20 editorial-shadow">
-            <div class="container mx-auto px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <section
+            class="reveal bg-surface-container-low py-8 md:py-12 relative -mt-6 md:-mt-10 mx-4 md:mx-8 rounded-xl z-20 editorial-shadow">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
                     <div>
-                        <div class="text-4xl font-headline font-extrabold text-primary mb-1">ICAR</div>
-                        <div class="text-sm font-label text-on-surface-variant uppercase tracking-widest">Accredited
+                        <div class="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold text-primary mb-1">
+                            ICAR</div>
+                        <div
+                            class="text-[10px] sm:text-xs md:text-sm font-label text-on-surface-variant uppercase tracking-widest leading-snug">
+                            Accredited
                             Program</div>
                     </div>
                     <div>
-                        <div class="text-4xl font-headline font-extrabold text-primary mb-1">100%</div>
-                        <div class="text-sm font-label text-on-surface-variant uppercase tracking-widest">Hands-on
+                        <div class="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold text-primary mb-1">
+                            100%</div>
+                        <div
+                            class="text-[10px] sm:text-xs md:text-sm font-label text-on-surface-variant uppercase tracking-widest leading-snug">
+                            Hands-on
                             Learning</div>
                     </div>
                     <div>
-                        <div class="text-4xl font-headline font-extrabold text-primary mb-1">A++</div>
-                        <div class="text-sm font-label text-on-surface-variant uppercase tracking-widest">NAAC Rating
+                        <div class="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold text-primary mb-1">A++
+                        </div>
+                        <div
+                            class="text-[10px] sm:text-xs md:text-sm font-label text-on-surface-variant uppercase tracking-widest leading-snug">
+                            NAAC Rating
                         </div>
                     </div>
                     <div>
-                        <div class="text-4xl font-headline font-extrabold text-primary mb-1">Top 10</div>
-                        <div class="text-sm font-label text-on-surface-variant uppercase tracking-widest">University in
-                            India</div>
+                        <div class="text-2xl sm:text-3xl lg:text-4xl font-headline font-extrabold text-primary mb-1">8th
+                        </div>
+                        <div
+                            class="text-[10px] sm:text-xs md:text-sm font-label text-on-surface-variant uppercase tracking-widest leading-snug">
+                            India University Rankings 2025
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
         <!-- Programs Offered Section -->
-        <section class="reveal py-24 px-8 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-5">
-                    <h2 class="text-4xl font-headline font-bold text-primary mb-8 leading-tight">Deep Expertise in Crop
-                        Science &amp; Sustainability</h2>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-6 font-body">
-                        The M.Sc. Agronomy program offers deep expertise in crop science, soil health, and sustainable
-                        systems. We adopt a science-based approach to tackle global food security challenges.
+        <section id="programs" class="reveal py-16 md:py-24 px-6 md:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+                <div class="md:col-span-5 md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-headline font-bold text-primary mb-6 md:mb-8">
+                        Programs Offered</h2>
+                    <p class="text-on-surface-variant text-base md:text-lg mb-4 md:mb-6 font-body">
+                        The M.Sc. Agronomy programme is designed to build deep expertise in crop science, soil health,
+                        water management, and sustainable agricultural systems. With a strong interdisciplinary
+                        approach, the programme integrates traditional agricultural knowledge with modern technologies
+                        such as precision farming, satellite-based monitoring, and data-driven decision-making.
                     </p>
-                    <p class="text-on-surface-variant text-lg leading-relaxed font-body">
-                        Our curriculum is designed to transform students into agricultural leaders capable of
-                        implementing climate-resilient farming and integrated nutrient management strategies.
+                    <p class="text-on-surface-variant text-base md:text-lg font-body">
+                        Students are trained to understand agriculture not just as a practice—but as a science that
+                        shapes food security, environmental sustainability, and the future of humanity.
                     </p>
                 </div>
-                <div class="md:col-span-7 grid grid-cols-2 gap-4">
-                    <div class="rounded-xl overflow-hidden aspect-[4/5] mt-12 lift-3d shadow-xl">
+                <div class="md:col-span-7 grid grid-cols-2 gap-3 md:gap-4 mt-6 md:mt-0 px-2 md:px-0">
+                    <div class="rounded-xl overflow-hidden aspect-[4/5] mt-6 md:mt-12 lift-3d shadow-xl">
                         <img class="w-full h-full object-cover" data-alt="researcher examining seedlings"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKZOIUUrFUOxo-RSZd9ajoChZMrCIiDDucz_7rbTIIktWUILW1nwlA3IIZ8pJN6kBhL6c534z_fHx7u8BNPz8gGJNnA64DNKF_jm2Y7xnjkzd-EiPaaf147QDi28VzLNVn-glnxgffdi_Lv7eJhjuf9sNa8RpbQkzpO-h7ABXK7XXljs9P38ZSf9wCAOpRyVfyr4k--4RhHoA17LTtJ_Ou6rIWyez5H_I90MWPrJA9SDcgrZXB9j4ngFUVw0R0UAb2YuTH2ikwyJY" />
+                            src="/src/assets/program-offered-1.webp" />
                     </div>
                     <div class="rounded-xl overflow-hidden aspect-[4/5] lift-3d shadow-xl">
                         <img class="w-full h-full object-cover" data-alt="precision irrigation"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFaydTMQvMAZyhL13w6O-PwCoy5AepNscOzEQkUptnbUfYtNwECJmV45o0XajeCbA111Y-fw9c3xYK6YApUNpCa8eoOjT_QH0BPupkwHIj0bhAgTFmhodI3i5VseubREET7JcTmdsWh4YK7yj-hONqKlGqH56dZkrtZC2ayVsEjaiEACI-IqqjsQVn7IPWbxrynag9jJXtgIfe2OtO1vSNzOMxiF1d20Esv37SztW26ujWeMlTYU_r4DM3c7KubvVOHPGTuqQ_q0" />
+                            src="/src/assets/program-offered-2.webp" />
                     </div>
                 </div>
             </div>
         </section>
         <!-- Agronomy Specifics Section -->
-        <section class="reveal bg-primary py-24 px-8 relative overflow-hidden">
+        <section class="reveal bg-primary py-16 md:py-24 px-6 md:px-8 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
                 <span class="material-symbols-outlined text-[400px]"
                     style="font-variation-settings: 'FILL' 0;">psychology</span>
             </div>
             <div class="max-w-7xl mx-auto relative z-10">
-                <div class="mb-16">
-                    <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-white mb-6">Scientific &amp;
-                        Technological Advancements</h2>
-                    <p class="text-primary-fixed text-xl max-w-2xl font-body">Rooted in ICAR guidelines, our program
-                        bridges the gap between traditional wisdom and modern innovation through precision farming and
-                        satellite monitoring.</p>
+                <div class="mb-10 md:mb-16 md:text-left">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-headline font-extrabold text-white mb-4 md:mb-6">
+                        M.Sc. Agronomy</h2>
+                    <p class="text-primary-fixed text-base sm:text-lg md:text-xl max-w-3xl mx-auto md:mx-0 font-body">
+                        At Amrita Vishwa Vidyapeetham,
+                        agricultural education moves beyond conventional boundaries. The programme blends scientific
+                        knowledge with technological advancements, offering students exposure to modern agronomic
+                        practices aligned with international standards and ICAR guidelines.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="flex overflow-x-auto md:grid md:grid-cols-3 gap-5 md:gap-8 px-2 md:px-0 pb-4 md:pb-0 snap-x snap-mandatory hide-scrollbar style='scrollbar-width: none;'">
                     <div
-                        class="glass-card p-10 rounded-xl border border-white/10 hover:border-primary-fixed/30 transition-all lift-3d group">
-                        <div
-                            class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-primary"
-                                data-icon="energy_savings_leaf">energy_savings_leaf</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-white mb-4">Climate-Resilient Farming</h3>
-                        <p class="text-white/80 font-body">Strategies to adapt crop production to changing climate
-                            patterns while maintaining high yields.</p>
+                        class="bg-surface-container-highest p-8 md:p-10 rounded-xl border border-white/10 hover:border-primary-fixed/30 transition-all shrink-0 w-[85%] sm:w-[60%] md:w-auto snap-center">
+                        <h3 class="text-xl md:text-2xl font-headline font-bold text-black mb-3 md:mb-4">Sustainable
+                            Curriculum</h3>
+                        <p class="text-gray font-body text-sm md:text-base leading-relaxed">Focuses on sustainable
+                            crop production, integrated nutrient
+                            and weed management, irrigation strategies, and climate-resilient farming systems.</p>
                     </div>
                     <div
-                        class="glass-card p-10 rounded-xl border border-white/10 hover:border-primary-fixed/30 transition-all lift-3d group">
-                        <div
-                            class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-primary" data-icon="science">science</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-white mb-4">Nutrient Management</h3>
-                        <p class="text-white/80 font-body">Integrated systems focusing on soil health through scientific
-                            nutrient application and organic synergy.</p>
+                        class="bg-surface-container-highest p-8 md:p-10 rounded-xl border border-white/10 hover:border-primary-fixed/30 transition-all shrink-0 w-[85%] sm:w-[60%] md:w-auto snap-center">
+                        <h3 class="text-xl md:text-2xl font-headline font-bold text-black mb-3 md:mb-4">Hands-on
+                            Experience</h3>
+                        <p class="text-gray font-body text-sm md:text-base leading-relaxed">Gain practical expertise
+                            through research, fieldwork, and
+                            real-world applications to innovate and adapt in an evolving landscape.</p>
                     </div>
                     <div
-                        class="glass-card p-10 rounded-xl border border-white/10 hover:border-primary-fixed/30 transition-all lift-3d group">
-                        <div
-                            class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-primary"
-                                data-icon="precision_manufacturing">precision_manufacturing</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-white mb-4">Hands-on Experience</h3>
-                        <p class="text-white/80 font-body">Intensive field exposure and laboratory research translate
-                            theoretical concepts into real-world results.</p>
+                        class="bg-surface-container-highest p-8 md:p-10 rounded-xl border border-white/10 hover:border-primary-fixed/30 transition-all shrink-0 w-[85%] sm:w-[60%] md:w-auto snap-center">
+                        <h3 class="text-xl md:text-2xl font-headline font-bold text-black mb-3 md:mb-4">Holistic Vision
+                        </h3>
+                        <p class="text-gray font-body text-sm md:text-base leading-relaxed">Understanding ecosystems
+                            and preserving resources to build
+                            resilient agricultural systems for the future beyond just growing crops.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Amrita School of Agriculture (Living Laboratory) -->
-        <section class="reveal py-24 bg-surface">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="flex flex-col md:flex-row gap-16 items-center">
+        <section id="about" class="reveal py-16 md:py-24 bg-surface">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
                     <div class="w-full md:w-1/2 relative">
                         <div class="rounded-xl overflow-hidden editorial-shadow lift-3d">
-                            <img class="w-full h-[600px] object-cover" data-alt="scenic university campus"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlnyK0f64ScIz6LamSveeBx6HetIusvmT-08j-CdHSiCkXdGfbdbpE8jNBMg1OVh2udr-V4JftAX0uVPySVdyrWPbe-ZGxnKKcBPJ4TXxT1yFtDV3GcCbEb8Jel3rs-QLwnQlA2G5Looxdk9qRvM1aLWgqISAl09q0CxKD-oyKXIRDZ6brs84eY4vaHu1QhP20YN6e1trXQQqy0TtD0F7icNeNbCsX-w4zJyEXTnF2V3aN2VPvUAl9WxxQ1rnU61DE7kXrTN4EgiA" />
+                            <img class="w-full h-[320px] sm:h-[400px] md:h-[600px] object-cover"
+                                data-alt="scenic university campus" src="/src/assets/amrita-school-agriculture.webp" />
                         </div>
                         <div
-                            class="absolute -bottom-8 -right-8 bg-surface-container-highest p-8 rounded-xl max-w-xs editorial-shadow hidden lg:block lift-3d">
+                            class="absolute -bottom-8 -right-8 bg-white p-8 rounded-xl max-w-xs editorial-shadow hidden lg:block">
                             <p class="font-headline font-bold text-primary italic">"A Living Laboratory at the foothills
                                 of the Western Ghats."</p>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-headline font-bold text-primary mb-8">Amrita School of Agricultural
+                    <div class="w-full md:w-1/2 flex flex-col items-center md:items-start md:text-left">
+                        <h2
+                            class="text-3xl md:text-4xl font-headline font-bold text-primary mb-5 md:mb-8 leading-tight">
+                            Amrita School of Agricultural
                             Sciences</h2>
-                        <p class="text-on-surface-variant text-lg mb-6 leading-relaxed">
-                            Located in the scenic Coimbatore campus, our school serves as a "living laboratory" in the
-                            foothills of the Western Ghats. With world-class infrastructure and 150+ acres of dedicated
-                            farmland, we provide an unparalleled environment for agricultural research.
+                        <p class="text-on-surface-variant text-base sm:text-lg mb-6 leading-relaxed">
+                            The Amrita School of Agriculture at the Coimbatore campus offers a unique learning
+                            environment where science meets soil, and knowledge grows with nature. The campus provides
+                            an ideal setting for agricultural learning—rich in biodiversity, sustainability practices,
+                            and hands-on field exposure.
                         </p>
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start gap-4">
+                        <div class="space-y-4 mb-8 w-full md:w-auto text-left">
+                            <div
+                                class="flex items-start gap-4 bg-surface-container-low p-4 rounded-lg md:bg-transparent md:p-0 md:rounded-none">
                                 <span class="material-symbols-outlined text-primary mt-1"
                                     data-icon="done_all">done_all</span>
                                 <div>
-                                    <h4 class="font-headline font-bold">State-of-the-Art Labs</h4>
-                                    <p class="text-on-surface-variant text-sm">Specialized soil science and plant
+                                    <h4 class="font-headline font-bold text-[17px] md:text-base">State-of-the-Art Labs
+                                    </h4>
+                                    <p class="text-on-surface-variant text-sm mt-1">Specialized soil science and plant
                                         pathology laboratories.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
+                            <div
+                                class="flex items-start gap-4 bg-surface-container-low p-4 rounded-lg md:bg-transparent md:p-0 md:rounded-none">
                                 <span class="material-symbols-outlined text-primary mt-1"
                                     data-icon="done_all">done_all</span>
                                 <div>
-                                    <h4 class="font-headline font-bold">Western Ghats Foothills</h4>
-                                    <p class="text-on-surface-variant text-sm">Micro-climate diversity for diverse crop
+                                    <h4 class="font-headline font-bold text-[17px] md:text-base">Western Ghats Foothills
+                                    </h4>
+                                    <p class="text-on-surface-variant text-sm mt-1">Micro-climate diversity for diverse
+                                        crop
                                         research.</p>
                                 </div>
                             </div>
                         </div>
-                        <button class="text-primary font-headline font-bold flex items-center gap-2 group">
+                        <button class="text-primary font-headline font-bold flex items-center gap-2 group w-max">
                             Explore Campus Facilities
                             <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
                                 data-icon="arrow_forward">arrow_forward</span>
@@ -228,149 +268,262 @@
             </div>
         </section>
         <!-- Why Study at Amrita? Section -->
-        <section class="reveal py-24 bg-surface-container-low px-8">
+        <section class="reveal py-16 md:py-24 bg-surface-container-low px-6 md:px-8">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-headline font-extrabold text-primary mb-4">Why Study at Amrita?</h2>
-                    <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-headline font-extrabold text-primary mb-4">Why Study at Amrita?
+                    </h2>
+                    <div class="w-20 md:w-24 h-1 bg-secondary mx-auto rounded-full"></div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-surface p-8 rounded-xl editorial-shadow lift-3d">
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4"
-                            data-icon="smart_toy">smart_toy</span>
-                        <h4 class="text-lg font-headline font-bold mb-2">Technology-Integrated</h4>
-                        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Exposure to precision
-                            agriculture, drone technology, and data analytics in farming.</p>
+                <div class="relative w-full max-w-4xl mx-auto mt-8 md:mt-10">
+                    <!-- Vertical Timeline Line -->
+                    <div
+                        class="absolute left-5 md:left-1/2 transform md:-translate-x-1/2 w-[1px] bg-stone-300 h-full top-0">
                     </div>
-                    <div class="bg-surface p-8 rounded-xl editorial-shadow lift-3d">
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4"
-                            data-icon="verified">verified</span>
-                        <h4 class="text-lg font-headline font-bold mb-2">ICAR Aligned</h4>
-                        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Curriculum follows the
-                            strict quality benchmarks of the Indian Council of Agricultural Research.</p>
+
+                    <div class="flex flex-col md:flex-row items-start justify-between w-full mb-6 md:mb-8 relative">
+                        <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 md:pr-10">
+                            <h4 class="text-lg md:text-xl font-bold text-primary mb-1 md:mb-2">Technology-Integrated
+                            </h4>
+                            <p class="text-stone-600 text-sm md:text-base leading-snug">Exposure to precision
+                                agriculture, drone technology, and data analytics in farming.</p>
+                        </div>
+                        <div
+                            class="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex justify-center w-8 top-0">
+                            <div
+                                class="w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-[4px] md:border-[6px] border-surface-container-low box-content shadow-sm z-10 transition-transform hover:scale-110">
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-5/12"></div>
                     </div>
-                    <div class="bg-surface p-8 rounded-xl editorial-shadow lift-3d">
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4"
-                            data-icon="biotech">biotech</span>
-                        <h4 class="text-lg font-headline font-bold mb-2">Research Focus</h4>
-                        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Emphasis on publications
-                            and innovative solutions for sustainable agriculture.</p>
+
+                    <div class="flex flex-col md:flex-row items-start justify-between w-full mb-6 md:mb-8 relative">
+                        <div class="hidden md:block w-5/12"></div>
+                        <div
+                            class="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex justify-center w-8 top-0">
+                            <div
+                                class="w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-[4px] md:border-[6px] border-surface-container-low box-content shadow-sm z-10 transition-transform hover:scale-110">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-5/12 text-left pl-12 md:pl-10">
+                            <h4 class="text-lg md:text-xl font-bold text-primary mb-1 md:mb-2">ICAR Aligned</h4>
+                            <p class="text-stone-600 text-sm md:text-base leading-snug">Curriculum follows the strict
+                                quality benchmarks of the Indian Council of Agricultural Research.</p>
+                        </div>
                     </div>
-                    <div class="bg-surface p-8 rounded-xl editorial-shadow lift-3d">
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4"
-                            data-icon="group_work">group_work</span>
-                        <h4 class="text-lg font-headline font-bold mb-2">Global Exposure</h4>
-                        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Opportunities for
-                            international internships and collaborative research projects.</p>
+
+                    <div class="flex flex-col md:flex-row items-start justify-between w-full mb-6 md:mb-8 relative">
+                        <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 md:pr-10">
+                            <h4 class="text-lg md:text-xl font-bold text-primary mb-1 md:mb-2">Research Focus</h4>
+                            <p class="text-stone-600 text-sm md:text-base leading-snug">Emphasis on publications and
+                                innovative solutions for sustainable agriculture.</p>
+                        </div>
+                        <div
+                            class="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex justify-center w-8 top-0">
+                            <div
+                                class="w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-[4px] md:border-[6px] border-surface-container-low box-content shadow-sm z-10 transition-transform hover:scale-110">
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-5/12"></div>
                     </div>
-                    <div class="bg-surface p-8 rounded-xl editorial-shadow lift-3d">
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4"
-                            data-icon="nature_people">nature_people</span>
-                        <h4 class="text-lg font-headline font-bold mb-2">Social Impact</h4>
-                        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Value-based education
-                            focused on uplifting rural communities and farmers.</p>
+
+                    <div class="flex flex-col md:flex-row items-start justify-between w-full mb-6 md:mb-8 relative">
+                        <div class="hidden md:block w-5/12"></div>
+                        <div
+                            class="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex justify-center w-8 top-0">
+                            <div
+                                class="w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-[4px] md:border-[6px] border-surface-container-low box-content shadow-sm z-10 transition-transform hover:scale-110">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-5/12 text-left pl-12 md:pl-10">
+                            <h4 class="text-lg md:text-xl font-bold text-primary mb-1 md:mb-2">Global Exposure</h4>
+                            <p class="text-stone-600 text-sm md:text-base leading-snug">Opportunities for international
+                                internships and collaborative research projects.</p>
+                        </div>
                     </div>
-                    <div class="bg-surface p-8 rounded-xl editorial-shadow lift-3d">
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4"
-                            data-icon="psychology">psychology</span>
-                        <h4 class="text-lg font-headline font-bold mb-2">Industry Partnerships</h4>
-                        <p class="text-sm text-on-surface-variant font-body leading-relaxed">Direct engagement with
-                            leading agri-tech firms and research organizations.</p>
+
+                    <div class="flex flex-col md:flex-row items-start justify-between w-full mb-6 md:mb-8 relative">
+                        <div class="w-full md:w-5/12 text-left md:text-right pl-12 md:pl-0 md:pr-10">
+                            <h4 class="text-lg md:text-xl font-bold text-primary mb-1 md:mb-2">Social Impact</h4>
+                            <p class="text-stone-600 text-sm md:text-base leading-snug">Value-based education focused on
+                                uplifting rural communities and farmers.</p>
+                        </div>
+                        <div
+                            class="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex justify-center w-8 top-0">
+                            <div
+                                class="w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-[4px] md:border-[6px] border-surface-container-low box-content shadow-sm z-10 transition-transform hover:scale-110">
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-5/12"></div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-start justify-between w-full relative">
+                        <div class="hidden md:block w-5/12"></div>
+                        <div
+                            class="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex justify-center w-8 top-0 bottom-0">
+                            <div
+                                class="absolute top-4 bottom-[-50px] left-1/2 transform -translate-x-1/2 w-4 bg-surface-container-low z-0">
+                            </div>
+
+                            <div
+                                class="w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-[4px] md:border-[6px] border-surface-container-low box-content shadow-sm z-10 transition-transform hover:scale-110 relative">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-5/12 text-left pl-12 md:pl-10">
+                            <h4 class="text-lg md:text-xl font-bold text-primary mb-1 md:mb-2">Industry Partnerships
+                            </h4>
+                            <p class="text-stone-600 text-sm md:text-base leading-snug">Direct engagement with leading
+                                agri-tech firms and research organizations.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Career & Scholarships Section -->
-        <section class="reveal py-24 px-8 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <section id="scholarships" class="reveal py-16 md:py-24 px-6 md:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
                 <!-- Career Opportunities -->
-                <div>
-                    <h2 class="text-3xl font-headline font-bold text-primary mb-10 flex items-center gap-3">
-                        <span class="material-symbols-outlined text-secondary" data-icon="work">work</span>
+                <div id="careers">
+                    <h2
+                        class="text-2xl md:text-3xl font-headline font-bold text-primary mb-6 md:mb-10 text-center lg:text-left flex items-center justify-center lg:justify-start gap-3">
                         Career Opportunities
                     </h2>
-                    <div class="space-y-6">
+                    <div class="space-y-4 md:space-y-6">
                         <div
-                            class="p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
-                            <span class="font-headline font-bold text-on-surface">Doctoral Research (Ph.D.)</span>
-                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
-                                data-icon="trending_up">trending_up</span>
+                            class="p-5 md:p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
+                            <span
+                                class="font-headline font-bold text-[15px] sm:text-base text-on-surface text-center w-full lg:text-left lg:w-auto">Doctoral
+                                Research (Ph.D.)</span>
                         </div>
                         <div
-                            class="p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
-                            <span class="font-headline font-bold text-on-surface">Agricultural Research Services (ARS)
-                                &amp; Gov Sectors</span>
-                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
-                                data-icon="trending_up">trending_up</span>
+                            class="p-5 md:p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
+                            <span
+                                class="font-headline font-bold text-[15px] sm:text-base text-on-surface text-center w-full lg:text-left lg:w-auto">Agricultural
+                                Research Services (ARS) &amp; Gov Sectors</span>
                         </div>
                         <div
-                            class="p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
-                            <span class="font-headline font-bold text-on-surface">Agri-Tech &amp; Precision Farming
-                                Sector</span>
-                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
-                                data-icon="trending_up">trending_up</span>
+                            class="p-5 md:p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
+                            <span
+                                class="font-headline font-bold text-[15px] sm:text-base text-on-surface text-center w-full lg:text-left lg:w-auto">Agri-Tech
+                                &amp; Precision Farming Sector</span>
                         </div>
                         <div
-                            class="p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
-                            <span class="font-headline font-bold text-on-surface">International Agribusiness
-                                Consultant</span>
-                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity"
-                                data-icon="trending_up">trending_up</span>
+                            class="p-5 md:p-6 bg-surface-container-high rounded-lg flex justify-between items-center group cursor-pointer hover:bg-primary-fixed transition-colors lift-3d">
+                            <span
+                                class="font-headline font-bold text-[15px] sm:text-base text-on-surface text-center w-full lg:text-left lg:w-auto">International
+                                Agribusiness Consultant</span>
                         </div>
                     </div>
                 </div>
                 <!-- Scholarships -->
-                <div class="bg-[#173418] rounded-2xl p-12 text-white editorial-shadow relative overflow-hidden lift-3d">
+                <div class="bg-[#173418] p-8 md:p-12 text-white editorial-shadow relative overflow-hidden lift-3d">
                     <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-container rounded-full opacity-20">
                     </div>
-                    <h2 class="text-3xl font-headline font-bold mb-8">Scholarships &amp; Support</h2>
-                    <p class="text-primary-fixed text-lg mb-8">We reward academic excellence and provide support for
+                    <h2 class="text-2xl md:text-3xl font-headline font-bold mb-4 md:mb-8 text-center lg:text-left">
+                        Scholarships &amp; Support</h2>
+                    <p class="text-primary-fixed text-base md:text-lg mb-6 md:mb-8 lg:text-left">We reward
+                        academic excellence and provide support for
                         deserving candidates.</p>
-                    <ul class="space-y-6">
+                    <ul class="space-y-5 md:space-y-6">
                         <li class="flex gap-4">
-                            <span class="material-symbols-outlined text-primary-fixed"
+                            <span class="material-symbols-outlined text-primary-fixed shrink-0"
                                 data-icon="military_tech">military_tech</span>
                             <div>
-                                <h4 class="font-headline font-bold">Merit-Based Scholarships</h4>
-                                <p class="text-white/70 text-sm">Up to 50% tuition waiver for top rankers in qualifying
-                                    exams.</p>
+                                <h4 class="font-headline font-bold text-[17px] md:text-base">Merit-Based Scholarships
+                                </h4>
+                                <p class="text-white/70 text-sm mt-1">Up to 50% tuition waiver for top rankers in
+                                    qualifying exams.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
-                            <span class="material-symbols-outlined text-primary-fixed"
+                            <span class="material-symbols-outlined text-primary-fixed shrink-0"
                                 data-icon="volunteer_activism">volunteer_activism</span>
                             <div>
-                                <h4 class="font-headline font-bold">Financial Support Opportunities</h4>
-                                <p class="text-white/70 text-sm">Special grants for research-focused students and
+                                <h4 class="font-headline font-bold text-[17px] md:text-base">Financial Support
+                                    Opportunities</h4>
+                                <p class="text-white/70 text-sm mt-1">Special grants for research-focused students and
                                     underprivileged backgrounds.</p>
                             </div>
                         </li>
                         <li class="flex gap-4">
-                            <span class="material-symbols-outlined text-primary-fixed" data-icon="school">school</span>
+                            <span class="material-symbols-outlined text-primary-fixed shrink-0"
+                                data-icon="school">school</span>
                             <div>
-                                <h4 class="font-headline font-bold">Research-based Funding</h4>
-                                <p class="text-white/70 text-sm">Dedicated stipends for innovative projects and doctoral
-                                    aspirants.</p>
+                                <h4 class="font-headline font-bold text-[17px] md:text-base">Research-based Funding</h4>
+                                <p class="text-white/70 text-sm mt-1">Dedicated stipends for innovative projects and
+                                    doctoral aspirants.</p>
                             </div>
                         </li>
                     </ul>
-                    <button
-                        class="mt-10 bg-white text-primary px-8 py-3 rounded-full font-headline font-bold hover:bg-primary-fixed transition-colors">Learn
-                        More About Aid</button>
+                </div>
+            </div>
+        </section>
+        <!-- Why Amrita Section -->
+        <section class="reveal bg-surface-container-low py-10 md:py-15">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="text-center mb-6">
+                    <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-[#173418] mb-4">Why Amrita</h2>
+                    <p class="text-lg text-stone-600 font-body">The top reasons to choose Amrita for your career</p>
+                </div>
+
+                <div class="overflow-hidden w-full relative max-w-7xl mx-auto hide-scrollbar"
+                    style="scrollbar-width: none;">
+                    <div
+                        class="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
+                    </div>
+
+                    <div class="flex animate-scroll py-8 hover:will-change-auto w-max">
+                        <div class="flex items-center gap-12 md:gap-16 pr-12 md:pr-16 shrink-0">
+                            <!-- Group 1 -->
+                            <img src="/src/assets/impact-2025.svg" alt="THE Impact Rankings 2025"
+                                class="h-10 md:h-12 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                            <img src="/src/assets/university-rankings.svg" alt="THE World University Rankings"
+                                class="h-10 md:h-12 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                            <img src="/src/assets/nirf-rankings.svg" alt="NIRF Rankings"
+                                class="h-10 md:h-16 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                        </div>
+                        <div class="flex items-center gap-12 md:gap-16 pr-12 md:pr-16 shrink-0">
+                            <!-- Group 2 -->
+                            <img src="/src/assets/impact-2025.svg" alt="THE Impact Rankings 2025"
+                                class="h-10 md:h-12 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                            <img src="/src/assets/university-rankings.svg" alt="THE World University Rankings"
+                                class="h-10 md:h-12 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                            <img src="/src/assets/nirf-rankings.svg" alt="NIRF Rankings"
+                                class="h-10 md:h-16 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                        </div>
+                        <div class="flex items-center gap-12 md:gap-16 pr-12 md:pr-16 shrink-0">
+                            <!-- Group 3 -->
+                            <img src="/src/assets/impact-2025.svg" alt="THE Impact Rankings 2025"
+                                class="h-10 md:h-12 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                            <img src="/src/assets/university-rankings.svg" alt="THE World University Rankings"
+                                class="h-10 md:h-12 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                            <img src="/src/assets/nirf-rankings.svg" alt="NIRF Rankings"
+                                class="h-10 md:h-16 object-contain transition-transform duration-300 hover:scale-105 shrink-0">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Contact Us Section -->
-        <section class="reveal bg-surface-container-low py-24 px-8">
+        <section class="reveal py-16 md:py-20 px-6 md:px-8">
             <div class="max-w-7xl mx-auto">
-                <div class="bg-surface rounded-3xl overflow-hidden editorial-shadow flex flex-col lg:flex-row lift-3d">
-                    <div class="lg:w-1/2 p-12 md:p-16">
-                        <h2 class="text-4xl font-headline font-bold text-primary mb-8">Get in Touch</h2>
-                        <div class="space-y-8">
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-primary"
+                <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center justify-center">
+                    <div class="lg:w-5/12 w-full max-w-md">
+                        <img src="/src/assets/contact-section.webp" alt="Contact Us Image"
+                            class="w-full h-auto object-cover rounded-xl">
+                    </div>
+                    <div class="lg:w-5/12 w-full flex flex-col justify-center text-center lg:text-left">
+                        <h2
+                            class="text-3xl md:text-4xl font-headline font-bold text-primary mb-6 md:mb-8 text-center lg:text-left">
+                            Get in Touch</h2>
+                        <div
+                            class="space-y-6 md:space-y-8 text-left bg-surface-container-low lg:bg-transparent p-6 lg:p-0 rounded-xl lg:rounded-none">
+                            <div class="flex gap-3 md:gap-2 items-center lg:items-start">
+                                <div class="w-12 h-12 flex items-start justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-primary text-3xl"
                                         data-icon="location_on">location_on</span>
                                 </div>
                                 <div>
@@ -382,33 +535,18 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                            <div
+                                class="flex gap-3 md:gap-2 items-center lg:items-start w-full lg:border-none pt-4 lg:pt-0">
+                                <div class="w-12 h-12 flex items-start justify-center shrink-0">
+                                    <span class="material-symbols-outlined text-primary text-3xl"
+                                        data-icon="call">call</span>
                                 </div>
                                 <div>
                                     <h4 class="font-headline font-bold mb-1">Call Us</h4>
                                     <p class="text-on-surface-variant">+91 422 2685000 | +91 94432 12345</p>
                                 </div>
                             </div>
-                            <div class="flex gap-6">
-                                <div
-                                    class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-headline font-bold mb-1">Email</h4>
-                                    <p class="text-on-surface-variant">admissions.agri@amrita.edu</p>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <div class="lg:w-1/2 min-h-[400px] relative overflow-hidden group">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            data-alt="abstract architectural photograph"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6jI9cFTRG1jprYHVlT68H_mLdCDzFHMNxC-Lh0PBwclVxfkVfZcjHa5vuYriMQhWr3EM6Bgplqln9GtvJYbbseq21-Q0Jy1Vv9WxI4r94WYZJtONrNgRSL10_1b1jinBHFC72dx4GoI9EqBt7DAIJKPQAiBA4vthzPIg7potU7kPY7jLIryVXNI2QTZi0ttFC_HnRC12GrilccEB8QIJx9SMu2f92gQvNxNVOjFX9j_YabIbkIjOOM2O7rTrmyUChmoPot1d2rQg" />
-                        <div class="absolute inset-0 bg-primary/10"></div>
                     </div>
                 </div>
             </div>
@@ -416,36 +554,9 @@
     </main>
     <!-- Footer -->
     <footer
-        class="w-full bg-[#173418] dark:bg-stone-950 px-12 py-16 text-[#fbfaee] dark:text-[#c8ecc3] font-['Work_Sans'] text-sm tracking-wide">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-8 md:mb-0">
-                <div class="text-xl font-black text-[#fbfaee] mb-4">Amrita Agriculture</div>
-                <p class="max-w-xs opacity-70">Empowering the next generation of agricultural scientists with
-                    value-based education and research excellence.</p>
-            </div>
-            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                <div class="flex flex-col gap-3 text-center md:text-left">
-                    <h5 class="font-bold text-white uppercase text-xs tracking-widest mb-2">Quick Links</h5>
-                    <a class="text-stone-300/80 hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a>
-                    <a class="text-stone-300/80 hover:text-primary-fixed transition-colors" href="#">Terms of
-                        Service</a>
-                    <a class="text-stone-300/80 hover:text-primary-fixed transition-colors" href="#">Accreditation</a>
-                    <a class="text-stone-300/80 hover:text-primary-fixed transition-colors" href="#">Contact Us</a>
-                </div>
-                <div class="flex gap-4 mt-4 md:mt-0">
-                    <div
-                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all">
-                        <span class="material-symbols-outlined text-sm">share</span>
-                    </div>
-                    <div
-                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 cursor-pointer transition-all">
-                        <span class="material-symbols-outlined text-sm">public</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center opacity-60">
-            © 2024 Amrita School of Agricultural Sciences. All rights reserved.
+        class="w-full bg-[#173418] dark:bg-stone-950 py-2 text-[#fbfaee] dark:text-[#c8ecc3] font-['Work_Sans'] text-sm tracking-wide">
+        <div class="max-w-7xl mx-auto mt-1 pt-1 text-center opacity-60">
+            © 2026 Amrita School of Agricultural Sciences. All rights reserved.
         </div>
     </footer>
 

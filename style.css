@@ -5,30 +5,57 @@
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
 .glass-card {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
+
 .editorial-shadow {
     box-shadow: 0 20px 40px rgba(27, 28, 21, 0.06);
 }
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
+
 .parallax-bg {
     transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
+
 .lift-3d {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     transform-style: preserve-3d;
 }
+
 .lift-3d:hover {
     transform: translateY(-8px) scale(1.02) rotateX(2deg);
+}
+
+@keyframes scrollX {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scrollX 10s linear infinite;
+    width: max-content;
+    will-change: transform;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
 }
